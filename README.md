@@ -42,6 +42,8 @@
 
     실습폴더 : c_example
 
+    mac vscode git test
+
 ---
 
 
