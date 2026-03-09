@@ -1,5 +1,5 @@
-# study0309
-학습저장소
+# kuhrd 개발자 교육
+학습정리
 
 ---
 
@@ -49,5 +49,7 @@ git config --global user.name freshmea
 
 
 ---
+
+## 2026-03-10
 
 
