@@ -28,7 +28,7 @@
         #define END_HELLO "end of file\n" => END_HELLO를 "end of file\n" 로 치환
 
 
-    실습폴더 : c_example ([text](https://github.com/Gwiin/study0309/tree/main/c_example))
+    실습폴더 : c_example
 
 ---
 
