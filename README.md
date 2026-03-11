@@ -1,7 +1,5 @@
 # kuhrd 개발자 교육
-학습정리
 
----
 
 ## [2026-03-09]
 
@@ -114,8 +112,8 @@ clean :
 삼항연산자 :  `?`
 
 ```C
-    printf("1 <= %d <= 9 : %s\n" ,num, (1<=num)&&(num<=9) ? "true" : "false");
-    // '?' 삼항 연산자 ( [조건식] ? [참] : [거짓] )
+printf("1 <= %d <= 9 : %s\n" ,num, (1<=num)&&(num<=9) ? "true" : "false");
+// '?' 삼항 연산자 ( [조건식] ? [참] : [거짓] )
 ```
 
 [compare실습](./c_example/compare.c)<br>
@@ -160,8 +158,8 @@ if(조건식)
 ```
 
  - 난수생성
-    - srand()
-    - time(NULL)
+    - srand() `<stdlib.h>`
+    - time(NULL) `<time.h>`
 
 #### switch
 ```c

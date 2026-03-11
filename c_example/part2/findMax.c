@@ -9,7 +9,7 @@ int main(){
 
     srand(time(NULL));
     for(int i=0;i<MAXINDEX ; i++){
-        nums[i] = rand() % 100;
+        nums[i] = rand() % 1000;
         printf("%d ",nums[i]);
     }
     printf("\n");
