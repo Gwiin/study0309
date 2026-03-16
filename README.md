@@ -370,3 +370,13 @@ printf("%d-%d-%d\n", (*pD).year, (*pD).month, (*pD).day);
 printf("%d-%d-%d\n", pD->year, pD->month, pD->day);
 ```
 
+### 공용체, 열거형
+공용체(Union) : 두 가지이상의 type을 사용간으(하나의 메모리에 접근하는 방식)
+
+열거형(enum) : 가시성때문에 사용 , switch~case문
+
+
+```c
+char *ga = "asfsljflsialisjflsjfalisfj"; // 문자열 리터럴 상수, 변경이 불가능함
+```
+
