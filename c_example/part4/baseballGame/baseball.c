@@ -1,12 +1,9 @@
-#include<stdlib.h>
-#include<time.h>
-#include<stdio.h>
-#include<stdbool.h>
-#define SIZE 3
+#include "baseball.h"
+
 
 void generate_number(int* question) //숫자 생성
 {
-    srand(time(NULL));
+    srand(time(NULL)); 
     for(int i =0 ; i<SIZE; i++){
         question[i] = rand() % 10;
         for(int j = 0; j < i; j++){
