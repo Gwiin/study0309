@@ -380,3 +380,16 @@ printf("%d-%d-%d\n", pD->year, pD->month, pD->day);
 char *ga = "asfsljflsialisjflsjfalisfj"; // 문자열 리터럴 상수, 변경이 불가능함
 ```
 
+
+
+## [2026-03-17]
+
+
+|입력 get||출력 put||
+|---|---|---|---|
+|*char*|*string*|*char*|*string*|
+|`getc` `fgetc`|`gets` `fgets`|`putc` `fputc`|`puts` `fputs`|
+|포맷||||
+|`scanf` `fscanf` | `scanf_s(window)` |`printf` `fprintf` `sprintf` | `snprintf` `fflusth(FILE *)`|
+
+
