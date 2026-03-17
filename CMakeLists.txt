@@ -10,4 +10,5 @@ add_subdirectory(c_example/part4/myRandom)
 add_subdirectory(c_example/part4/baseballGame)
 add_subdirectory(c_example/part5/date)
 add_subdirectory(c_example/part5/twoDouble)
+add_subdirectory(c_example/part6/scoreProcess)
 
