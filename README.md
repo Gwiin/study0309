@@ -424,3 +424,5 @@ WAN, LAN, MQTT, 포트포워딩
 
 MQTT 소켓(TCP  UDP)
 
+myQueue3 - 동적할당
+

@@ -10,7 +10,9 @@ typedef struct {
     int *rear;
 }Queue;
 
+// front와 rear를 포인터로 선언한 이유 : 
 
 void initQueue(Queue *pq);
 void push(Queue *pq, int data);
 int pop(Queue *pq);
+void cleanQueue(Queue *pq);
