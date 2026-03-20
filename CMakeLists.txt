@@ -17,4 +17,5 @@ add_subdirectory(ds/stack/myStack3)
 add_subdirectory(ds/stack/myStack4)
 add_subdirectory(ds/queue/myQueue1)
 add_subdirectory(ds/queue/myQueue3)
+add_subdirectory(bowlingGame)
 
