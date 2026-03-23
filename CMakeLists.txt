@@ -4,6 +4,8 @@ project(study)
 set(CMAKE_C_STANDARD 17)
 set(CMAKE_CXX_STANDARD 17)
 
+include(ExternalProject)
+
 add_subdirectory(c_example/part3)
 add_subdirectory(c_example/part4/carSerial)
 add_subdirectory(c_example/part4/myRandom)
@@ -19,3 +21,13 @@ add_subdirectory(ds/queue/myQueue1)
 add_subdirectory(ds/queue/myQueue3)
 add_subdirectory(bowlingGame)
 
+
+ExternalProject_Add(atmega128_project
+	SOURCE_DIR ${CMAKE_SOURCE_DIR}/atmega128
+	BINARY_DIR ${CMAKE_BINARY_DIR}/atmega128-build
+	CMAKE_ARGS
+		-DCMAKE_TOOLCHAIN_FILE=${CMAKE_SOURCE_DIR}/atmega128/avr-toolchain.cmake
+		-DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
+		-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+	INSTALL_COMMAND ""
+)
