@@ -14,7 +14,8 @@ set(PROG_TYPE stk500v2)
 set(PROG_PORT usb)
 
 # --- 1. src 폴더의 모든 .c 파일 목록 가져오기 ---
-file(GLOB SRC_FILES "src/*.c")
+# CONFIGURE_DEPENDS를 사용하면 새 소스 파일이 추가되어도 빌드 시 자동으로 재설정된다.
+file(GLOB SRC_FILES CONFIGURE_DEPENDS "src/*.c")
 
 # --- 2. 각 파일별로 빌드 및 업로드 타겟 자동 생성 ---
 foreach(SOURCE_FILE ${SRC_FILES})
