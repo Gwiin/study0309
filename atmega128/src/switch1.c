@@ -3,7 +3,7 @@
 int main(void){
 
     DDRC = 0x0F;
-    DDRE = 0X00;
+    DDRE = 0x00;
     while(1){
         PORTC = PINE >> 4;
     }
