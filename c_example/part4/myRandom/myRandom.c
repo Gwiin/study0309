@@ -1,3 +1,5 @@
+#include "myRandom.h"
+
 extern int seed = 1;
 
 void my_srand(int s){
