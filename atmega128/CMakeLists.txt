@@ -13,6 +13,28 @@ set(F_CPU 16000000UL)
 set(PROG_TYPE stk500v2)
 set(PROG_PORT usb)
 
+# --- 공용 UART0 라이브러리 ---
+add_library(uart0 STATIC lib/uart0/uart0.c)
+target_include_directories(uart0 PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/lib/uart0
+)
+target_compile_options(uart0 PUBLIC
+    -mmcu=${MCU}
+    -DF_CPU=${F_CPU}
+    -Os -Wall
+)
+
+# --- 공용 LCD 라이브러리 ---
+add_library(lcd STATIC lib/lcd/lcd.c)
+target_include_directories(lcd PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/lib/lcd
+)
+target_compile_options(lcd PUBLIC
+    -mmcu=${MCU}
+    -DF_CPU=${F_CPU}
+    -Os -Wall
+)
+
 # --- 1. src 폴더의 모든 .c 파일 목록 가져오기 ---
 # CONFIGURE_DEPENDS를 사용하면 새 소스 파일이 추가되어도 빌드 시 자동으로 재설정된다.
 file(GLOB SRC_FILES CONFIGURE_DEPENDS "src/*.c")
@@ -30,6 +52,11 @@ foreach(SOURCE_FILE ${SRC_FILES})
         -DF_CPU=${F_CPU}
         -Os -Wall
     )
+    target_include_directories(${EXE_NAME}.elf PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/lib/uart0
+        ${CMAKE_CURRENT_SOURCE_DIR}/lib/lcd
+    )
+    target_link_libraries(${EXE_NAME}.elf PUBLIC uart0 lcd)
 
     target_link_options(${EXE_NAME}.elf PUBLIC -mmcu=${MCU})
 
