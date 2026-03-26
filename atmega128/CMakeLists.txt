@@ -35,6 +35,33 @@ target_compile_options(lcd PUBLIC
     -Os -Wall
 )
 
+# --- 공용 SHT20(TWI) 라이브러리 ---
+add_library(sht20 STATIC
+    lib/sht20/SHT2x.c
+    lib/sht20/TWI_driver.c
+)
+target_include_directories(sht20 PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/lib/sht20
+)
+target_compile_options(sht20 PUBLIC
+    -mmcu=${MCU}
+    -DF_CPU=${F_CPU}
+    -Os -Wall
+)
+
+# --- 공용 AT25 SPI EEPROM 라이브러리 ---
+add_library(at25 STATIC
+    lib/at25/at25160.c
+)
+target_include_directories(at25 PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/lib/at25
+)
+target_compile_options(at25 PUBLIC
+    -mmcu=${MCU}
+    -DF_CPU=${F_CPU}
+    -Os -Wall
+)
+
 # --- 1. src 폴더의 모든 .c 파일 목록 가져오기 ---
 # CONFIGURE_DEPENDS를 사용하면 새 소스 파일이 추가되어도 빌드 시 자동으로 재설정된다.
 file(GLOB SRC_FILES CONFIGURE_DEPENDS "src/*.c")
@@ -55,8 +82,10 @@ foreach(SOURCE_FILE ${SRC_FILES})
     target_include_directories(${EXE_NAME}.elf PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/lib/uart0
         ${CMAKE_CURRENT_SOURCE_DIR}/lib/lcd
+        ${CMAKE_CURRENT_SOURCE_DIR}/lib/sht20
+        ${CMAKE_CURRENT_SOURCE_DIR}/lib/at25
     )
-    target_link_libraries(${EXE_NAME}.elf PUBLIC uart0 lcd)
+    target_link_libraries(${EXE_NAME}.elf PUBLIC uart0 lcd sht20 at25)
 
     target_link_options(${EXE_NAME}.elf PUBLIC -mmcu=${MCU})
 
