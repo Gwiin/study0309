@@ -6,6 +6,9 @@ set(CMAKE_CXX_STANDARD 17)
 
 include(ExternalProject)
 
+string(REPLACE " " "_" ATMEGA128_GENERATOR_TAG "${CMAKE_GENERATOR}")
+set(ATMEGA128_BINARY_DIR "${CMAKE_BINARY_DIR}/atmega128-build-${ATMEGA128_GENERATOR_TAG}")
+
 add_subdirectory(c_example/part3)
 add_subdirectory(c_example/part4/carSerial)
 add_subdirectory(c_example/part4/myRandom)
@@ -24,10 +27,21 @@ add_subdirectory(bowlingGame)
 
 ExternalProject_Add(atmega128_project
 	SOURCE_DIR ${CMAKE_SOURCE_DIR}/atmega128
-	BINARY_DIR ${CMAKE_BINARY_DIR}/atmega128-build
+	BINARY_DIR ${ATMEGA128_BINARY_DIR}
+	CMAKE_GENERATOR ${CMAKE_GENERATOR}
+	BUILD_ALWAYS 1
 	CMAKE_ARGS
 		-DCMAKE_TOOLCHAIN_FILE=${CMAKE_SOURCE_DIR}/atmega128/avr-toolchain.cmake
 		-DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
 		-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 	INSTALL_COMMAND ""
+)
+
+ExternalProject_Add_Step(atmega128_project sync_compile_commands
+	COMMAND ${CMAKE_COMMAND} -E copy_if_different
+		${ATMEGA128_BINARY_DIR}/compile_commands.json
+		${CMAKE_SOURCE_DIR}/atmega128/compile_commands.json
+	DEPENDEES configure
+	ALWAYS 1
+	COMMENT "Syncing AVR compile_commands.json for IDE support"
 )
