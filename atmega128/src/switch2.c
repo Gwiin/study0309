@@ -9,12 +9,12 @@ int main()
     DDRE = 0x00; 
     PORTC = 0x00;
     while(1){
-        switch_flag = PINE >> 4; 
-        if(switch_flag == 0x01 || switch_flag == 0x02 || switch_flag == 0x04 || switch_flag == 0x08)
+        switch_flag = PINE >> 4;  
+        if(switch_flag == 0x01 || switch_flag == 0x02 || switch_flag == 0x04 || switch_flag == 0x08) 
         {
-            switch_flag_pre = switch_flag;
+            switch_flag_pre = switch_flag; 
         }
-        PORTC ^= 0x0F;
+        PORTC ^= 0x0F; 
         
         if(switch_flag_pre == 0x01)
             _delay_ms(250);
