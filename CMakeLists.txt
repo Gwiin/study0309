@@ -8,6 +8,8 @@ include(ExternalProject)
 
 string(REPLACE " " "_" ATMEGA128_GENERATOR_TAG "${CMAKE_GENERATOR}")
 set(ATMEGA128_BINARY_DIR "${CMAKE_BINARY_DIR}/atmega128-build-${ATMEGA128_GENERATOR_TAG}")
+string(REPLACE " " "_" PICO_GENERATOR_TAG "${CMAKE_GENERATOR}")
+set(PICO_BINARY_DIR "${CMAKE_BINARY_DIR}/pico-build-${PICO_GENERATOR_TAG}")
 
 add_subdirectory(c_example/part3)
 add_subdirectory(c_example/part4/carSerial)
@@ -24,6 +26,27 @@ add_subdirectory(ds/queue/myQueue1)
 add_subdirectory(ds/queue/myQueue3)
 add_subdirectory(bowlingGame)
 
+ExternalProject_Add(pico_project
+	SOURCE_DIR ${CMAKE_SOURCE_DIR}/pico
+	BINARY_DIR ${PICO_BINARY_DIR}
+	CMAKE_GENERATOR ${CMAKE_GENERATOR}
+	BUILD_ALWAYS 1
+	CMAKE_ARGS
+		-DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
+		-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+		-DPICO_NO_PICOTOOL=1
+		-DPICO_SDK_PATH=${CMAKE_SOURCE_DIR}/pico/deps/pico-sdk
+	INSTALL_COMMAND ""
+)
+
+ExternalProject_Add_Step(pico_project sync_compile_commands
+	COMMAND ${CMAKE_COMMAND} -E copy_if_different
+		${PICO_BINARY_DIR}/compile_commands.json
+		${CMAKE_SOURCE_DIR}/pico/compile_commands.json
+	DEPENDEES configure
+	ALWAYS 1
+	COMMENT "Syncing Pico compile_commands.json for IDE support"
+)
 
 ExternalProject_Add(atmega128_project
 	SOURCE_DIR ${CMAKE_SOURCE_DIR}/atmega128
