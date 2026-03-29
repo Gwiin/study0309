@@ -1,6 +1,7 @@
 # git submodule add https://github.com/raspberrypi/pico-sdk.git deps/pico-sdk
 
 cmake_minimum_required(VERSION 3.13)
+set(PICO_SDK_PATH "${CMAKE_CURRENT_LIST_DIR}/deps/pico-sdk")
 include(pico_sdk_import.cmake)
 project(my_project C CXX ASM)
 pico_sdk_init()
