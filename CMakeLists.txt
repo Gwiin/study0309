@@ -34,7 +34,6 @@ ExternalProject_Add(pico_project
 	CMAKE_ARGS
 		-DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
 		-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
-		-DPICO_NO_PICOTOOL=1
 		-DPICO_SDK_PATH=${CMAKE_SOURCE_DIR}/pico/deps/pico-sdk
 	INSTALL_COMMAND ""
 )
@@ -43,7 +42,7 @@ ExternalProject_Add_Step(pico_project sync_compile_commands
 	COMMAND ${CMAKE_COMMAND} -E copy_if_different
 		${PICO_BINARY_DIR}/compile_commands.json
 		${CMAKE_SOURCE_DIR}/pico/compile_commands.json
-	DEPENDEES configure
+	DEPENDEES build
 	ALWAYS 1
 	COMMENT "Syncing Pico compile_commands.json for IDE support"
 )

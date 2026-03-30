@@ -21,147 +21,157 @@
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/buzzermario.elf.dir/src/buzzermario.c.obj -c /home/asd/study/atmega128/src/buzzermario.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/at25.dir/lib/at25/at25160.c.obj -c /home/asd/study/atmega128/lib/at25/at25160.c",
+  "file": "/home/asd/study/atmega128/lib/at25/at25160.c"
+},
+{
+  "directory": "/home/asd/study/build/atmega128-build-Ninja",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/buzzermario.elf.dir/src/buzzermario.c.obj -c /home/asd/study/atmega128/src/buzzermario.c",
   "file": "/home/asd/study/atmega128/src/buzzermario.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/cds.elf.dir/src/cds.c.obj -c /home/asd/study/atmega128/src/cds.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/cds.elf.dir/src/cds.c.obj -c /home/asd/study/atmega128/src/cds.c",
   "file": "/home/asd/study/atmega128/src/cds.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/cds2.elf.dir/src/cds2.c.obj -c /home/asd/study/atmega128/src/cds2.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/cds2.elf.dir/src/cds2.c.obj -c /home/asd/study/atmega128/src/cds2.c",
   "file": "/home/asd/study/atmega128/src/cds2.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/cds_fnd.elf.dir/src/cds_fnd.c.obj -c /home/asd/study/atmega128/src/cds_fnd.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/cds_fnd.elf.dir/src/cds_fnd.c.obj -c /home/asd/study/atmega128/src/cds_fnd.c",
   "file": "/home/asd/study/atmega128/src/cds_fnd.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/dc_motor.elf.dir/src/dc_motor.c.obj -c /home/asd/study/atmega128/src/dc_motor.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/dc_motor.elf.dir/src/dc_motor.c.obj -c /home/asd/study/atmega128/src/dc_motor.c",
   "file": "/home/asd/study/atmega128/src/dc_motor.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/dc_pwm.elf.dir/src/dc_pwm.c.obj -c /home/asd/study/atmega128/src/dc_pwm.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/dc_pwm.elf.dir/src/dc_pwm.c.obj -c /home/asd/study/atmega128/src/dc_pwm.c",
   "file": "/home/asd/study/atmega128/src/dc_pwm.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/dc_pwm_vr.elf.dir/src/dc_pwm_vr.c.obj -c /home/asd/study/atmega128/src/dc_pwm_vr.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/dc_pwm_vr.elf.dir/src/dc_pwm_vr.c.obj -c /home/asd/study/atmega128/src/dc_pwm_vr.c",
   "file": "/home/asd/study/atmega128/src/dc_pwm_vr.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/fnd1.elf.dir/src/fnd1.c.obj -c /home/asd/study/atmega128/src/fnd1.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/external_eeprom.elf.dir/src/external_eeprom.c.obj -c /home/asd/study/atmega128/src/external_eeprom.c",
+  "file": "/home/asd/study/atmega128/src/external_eeprom.c"
+},
+{
+  "directory": "/home/asd/study/build/atmega128-build-Ninja",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/fnd1.elf.dir/src/fnd1.c.obj -c /home/asd/study/atmega128/src/fnd1.c",
   "file": "/home/asd/study/atmega128/src/fnd1.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/fnd2.elf.dir/src/fnd2.c.obj -c /home/asd/study/atmega128/src/fnd2.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/fnd2.elf.dir/src/fnd2.c.obj -c /home/asd/study/atmega128/src/fnd2.c",
   "file": "/home/asd/study/atmega128/src/fnd2.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/i2c_tempHumi.elf.dir/src/i2c_tempHumi.c.obj -c /home/asd/study/atmega128/src/i2c_tempHumi.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/i2c_tempHumi.elf.dir/src/i2c_tempHumi.c.obj -c /home/asd/study/atmega128/src/i2c_tempHumi.c",
   "file": "/home/asd/study/atmega128/src/i2c_tempHumi.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/interrupt1.elf.dir/src/interrupt1.c.obj -c /home/asd/study/atmega128/src/interrupt1.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/interrupt1.elf.dir/src/interrupt1.c.obj -c /home/asd/study/atmega128/src/interrupt1.c",
   "file": "/home/asd/study/atmega128/src/interrupt1.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/interrupt_fnd.elf.dir/src/interrupt_fnd.c.obj -c /home/asd/study/atmega128/src/interrupt_fnd.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/interrupt_fnd.elf.dir/src/interrupt_fnd.c.obj -c /home/asd/study/atmega128/src/interrupt_fnd.c",
   "file": "/home/asd/study/atmega128/src/interrupt_fnd.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/lcd1.elf.dir/src/lcd1.c.obj -c /home/asd/study/atmega128/src/lcd1.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/lcd1.elf.dir/src/lcd1.c.obj -c /home/asd/study/atmega128/src/lcd1.c",
   "file": "/home/asd/study/atmega128/src/lcd1.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/led2.elf.dir/src/led2.c.obj -c /home/asd/study/atmega128/src/led2.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/led2.elf.dir/src/led2.c.obj -c /home/asd/study/atmega128/src/led2.c",
   "file": "/home/asd/study/atmega128/src/led2.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/led3.elf.dir/src/led3.c.obj -c /home/asd/study/atmega128/src/led3.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/led3.elf.dir/src/led3.c.obj -c /home/asd/study/atmega128/src/led3.c",
   "file": "/home/asd/study/atmega128/src/led3.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/led4.elf.dir/src/led4.c.obj -c /home/asd/study/atmega128/src/led4.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/led4.elf.dir/src/led4.c.obj -c /home/asd/study/atmega128/src/led4.c",
   "file": "/home/asd/study/atmega128/src/led4.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/main.elf.dir/src/main.c.obj -c /home/asd/study/atmega128/src/main.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/main.elf.dir/src/main.c.obj -c /home/asd/study/atmega128/src/main.c",
   "file": "/home/asd/study/atmega128/src/main.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/pwmbuzzer.elf.dir/src/pwmbuzzer.c.obj -c /home/asd/study/atmega128/src/pwmbuzzer.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/pwmbuzzer.elf.dir/src/pwmbuzzer.c.obj -c /home/asd/study/atmega128/src/pwmbuzzer.c",
   "file": "/home/asd/study/atmega128/src/pwmbuzzer.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/pwmled.elf.dir/src/pwmled.c.obj -c /home/asd/study/atmega128/src/pwmled.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/pwmled.elf.dir/src/pwmled.c.obj -c /home/asd/study/atmega128/src/pwmled.c",
   "file": "/home/asd/study/atmega128/src/pwmled.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/switch1.elf.dir/src/switch1.c.obj -c /home/asd/study/atmega128/src/switch1.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/switch1.elf.dir/src/switch1.c.obj -c /home/asd/study/atmega128/src/switch1.c",
   "file": "/home/asd/study/atmega128/src/switch1.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/switch2.elf.dir/src/switch2.c.obj -c /home/asd/study/atmega128/src/switch2.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/switch2.elf.dir/src/switch2.c.obj -c /home/asd/study/atmega128/src/switch2.c",
   "file": "/home/asd/study/atmega128/src/switch2.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/switch_fnd.elf.dir/src/switch_fnd.c.obj -c /home/asd/study/atmega128/src/switch_fnd.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/switch_fnd.elf.dir/src/switch_fnd.c.obj -c /home/asd/study/atmega128/src/switch_fnd.c",
   "file": "/home/asd/study/atmega128/src/switch_fnd.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/test.elf.dir/src/test.c.obj -c /home/asd/study/atmega128/src/test.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/test.elf.dir/src/test.c.obj -c /home/asd/study/atmega128/src/test.c",
   "file": "/home/asd/study/atmega128/src/test.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/timer0led.elf.dir/src/timer0led.c.obj -c /home/asd/study/atmega128/src/timer0led.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/timer0led.elf.dir/src/timer0led.c.obj -c /home/asd/study/atmega128/src/timer0led.c",
   "file": "/home/asd/study/atmega128/src/timer0led.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/timer1com.elf.dir/src/timer1com.c.obj -c /home/asd/study/atmega128/src/timer1com.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/timer1com.elf.dir/src/timer1com.c.obj -c /home/asd/study/atmega128/src/timer1com.c",
   "file": "/home/asd/study/atmega128/src/timer1com.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/timer2ledleftright.elf.dir/src/timer2ledleftright.c.obj -c /home/asd/study/atmega128/src/timer2ledleftright.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/timer2ledleftright.elf.dir/src/timer2ledleftright.c.obj -c /home/asd/study/atmega128/src/timer2ledleftright.c",
   "file": "/home/asd/study/atmega128/src/timer2ledleftright.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/uart1.elf.dir/src/uart1.c.obj -c /home/asd/study/atmega128/src/uart1.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/uart1.elf.dir/src/uart1.c.obj -c /home/asd/study/atmega128/src/uart1.c",
   "file": "/home/asd/study/atmega128/src/uart1.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/uart2.elf.dir/src/uart2.c.obj -c /home/asd/study/atmega128/src/uart2.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/uart2.elf.dir/src/uart2.c.obj -c /home/asd/study/atmega128/src/uart2.c",
   "file": "/home/asd/study/atmega128/src/uart2.c"
 },
 {
   "directory": "/home/asd/study/build/atmega128-build-Ninja",
-  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/uart3.elf.dir/src/uart3.c.obj -c /home/asd/study/atmega128/src/uart3.c",
+  "command": "/usr/bin/avr-gcc -I/home/asd/study/atmega128/lib/uart0 -I/home/asd/study/atmega128/lib/lcd -I/home/asd/study/atmega128/lib/sht20 -I/home/asd/study/atmega128/lib/at25 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/uart3.elf.dir/src/uart3.c.obj -c /home/asd/study/atmega128/src/uart3.c",
   "file": "/home/asd/study/atmega128/src/uart3.c"
 }
 ]

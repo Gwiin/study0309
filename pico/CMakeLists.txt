@@ -6,13 +6,66 @@ include(pico_sdk_import.cmake)
 project(my_project C CXX ASM)
 pico_sdk_init()
 
-add_executable(hello_pico src/main.c)
+set(WIFI_SSID "bindsoft" CACHE STRING "Wi-Fi SSID for Pico W examples")
+set(WIFI_PASSWORD "bindsoft24" CACHE STRING "Wi-Fi password for Pico W examples")
+set(MQTT_SERVER "163.152.213.101" CACHE STRING "MQTT broker host")
+set(MQTT_PORT 1883 CACHE STRING "MQTT broker port")
+set(MQTT_USERNAME "" CACHE STRING "MQTT user name")
+set(MQTT_PASSWORD "" CACHE STRING "MQTT password")
+set(MQTT_CERT_PATH "${CMAKE_CURRENT_LIST_DIR}/src/mqtt/certs/${MQTT_SERVER}" CACHE PATH "Directory containing MQTT certificates")
+set(MQTT_CERT_INC "mqtt_client.inc" CACHE STRING "MQTT certificate include file")
 
-# 표준 라이브러리 연결
-target_link_libraries(hello_pico pico_stdlib)
+add_executable(blink src/blink.c)
+target_link_libraries(blink pico_stdlib)
 
-# USB 출력을 활성화하려면 아래 주석 해제 (Serial 모니터용)
-# pico_enable_stdio_usb(hello_pico 1)
-# pico_enable_stdio_uart(hello_pico 0)
+if (PICO_CYW43_SUPPORTED)
+    target_link_libraries(blink pico_cyw43_arch_none)
+endif()
 
-pico_add_extra_outputs(hello_pico)
+pico_enable_stdio_usb(blink 1)
+pico_enable_stdio_uart(blink 0)
+pico_add_extra_outputs(blink)
+
+add_executable(mqtt_client src/mqtt/mqtt_client.c)
+target_link_libraries(mqtt_client
+    pico_stdlib
+    hardware_adc
+    pico_cyw43_arch_lwip_threadsafe_background
+    pico_lwip_mqtt
+    pico_mbedtls
+    pico_lwip_mbedtls
+)
+target_include_directories(mqtt_client PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/src/mqtt
+    ${CMAKE_CURRENT_LIST_DIR}/src
+)
+target_compile_definitions(mqtt_client PRIVATE
+    WIFI_SSID=\"${WIFI_SSID}\"
+    WIFI_PASSWORD=\"${WIFI_PASSWORD}\"
+    MQTT_SERVER=\"${MQTT_SERVER}\"
+    MQTT_PORT=${MQTT_PORT}
+)
+if (EXISTS "${MQTT_CERT_PATH}/${MQTT_CERT_INC}")
+    target_compile_definitions(mqtt_client PRIVATE
+        MQTT_CERT_INC=\"${MQTT_CERT_INC}\"
+        ALTCP_MBEDTLS_AUTHMODE=MBEDTLS_SSL_VERIFY_REQUIRED
+    )
+    target_include_directories(mqtt_client PRIVATE
+        ${MQTT_CERT_PATH}
+    )
+endif()
+if (MQTT_USERNAME AND MQTT_PASSWORD)
+    target_compile_definitions(mqtt_client PRIVATE
+        MQTT_USERNAME=\"${MQTT_USERNAME}\"
+        MQTT_PASSWORD=\"${MQTT_PASSWORD}\"
+    )
+endif()
+pico_enable_stdio_usb(mqtt_client 1)
+pico_enable_stdio_uart(mqtt_client 0)
+pico_add_extra_outputs(mqtt_client)
+
+# Ignore warnings from lwIP's altcp TLS shim.
+set_source_files_properties(
+    ${PICO_LWIP_PATH}/src/apps/altcp_tls/altcp_tls_mbedtls.c
+    PROPERTIES COMPILE_OPTIONS "-Wno-unused-result"
+)
