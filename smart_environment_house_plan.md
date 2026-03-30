@@ -1,5 +1,14 @@
 # 스마트 환경제어 하우스 프로젝트 문서
 
+## 연계 문서
+
+작업 전에 아래 문서를 먼저 함께 확인한다.
+
+- [협업 가이드](/Users/jeong-gwiin/Desktop/study/doc/smart_house_team_workflow.md)
+- [노드 A 개발 문서](/Users/jeong-gwiin/Desktop/study/doc/node_a_environment_sensor_guide.md)
+- [노드 B 개발 문서](/Users/jeong-gwiin/Desktop/study/doc/node_b_actuator_control_guide.md)
+- [노드 C 개발 문서](/Users/jeong-gwiin/Desktop/study/doc/node_c_central_manager_guide.md)
+
 ## 1. 프로젝트 개요
 
 본 프로젝트는 `Raspberry Pi Pico 2 W (RP2350)` 3대를 활용하여 집 내부 환경을 실시간으로 모니터링하고, 조명 및 환기 장치를 자동으로 제어하는 `스마트 환경제어 하우스`를 구현하는 것을 목표로 한다.
