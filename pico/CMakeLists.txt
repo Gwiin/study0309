@@ -26,6 +26,16 @@ pico_enable_stdio_usb(blink 1)
 pico_enable_stdio_uart(blink 0)
 pico_add_extra_outputs(blink)
 
+add_executable(buzzermario src/buzzermario.c)
+target_link_libraries(buzzermario
+    pico_stdlib
+    hardware_clocks
+    hardware_pwm
+)
+pico_enable_stdio_usb(buzzermario 1)
+pico_enable_stdio_uart(buzzermario 0)
+pico_add_extra_outputs(buzzermario)
+
 add_executable(mqtt_client src/mqtt/mqtt_client.c)
 target_link_libraries(mqtt_client
     pico_stdlib
@@ -63,6 +73,44 @@ endif()
 pico_enable_stdio_usb(mqtt_client 1)
 pico_enable_stdio_uart(mqtt_client 0)
 pico_add_extra_outputs(mqtt_client)
+
+add_executable(dht22_mqtt src/dht22_mqtt.c)
+target_link_libraries(dht22_mqtt
+    pico_stdlib
+    hardware_i2c
+    pico_cyw43_arch_lwip_threadsafe_background
+    pico_lwip_mqtt
+    pico_mbedtls
+    pico_lwip_mbedtls
+)
+target_include_directories(dht22_mqtt PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/src/mqtt
+    ${CMAKE_CURRENT_LIST_DIR}/src
+)
+target_compile_definitions(dht22_mqtt PRIVATE
+    WIFI_SSID=\"${WIFI_SSID}\"
+    WIFI_PASSWORD=\"${WIFI_PASSWORD}\"
+    MQTT_SERVER=\"${MQTT_SERVER}\"
+    MQTT_PORT=${MQTT_PORT}
+)
+if (EXISTS "${MQTT_CERT_PATH}/${MQTT_CERT_INC}")
+    target_compile_definitions(dht22_mqtt PRIVATE
+        MQTT_CERT_INC=\"${MQTT_CERT_INC}\"
+        ALTCP_MBEDTLS_AUTHMODE=MBEDTLS_SSL_VERIFY_REQUIRED
+    )
+    target_include_directories(dht22_mqtt PRIVATE
+        ${MQTT_CERT_PATH}
+    )
+endif()
+if (MQTT_USERNAME AND MQTT_PASSWORD)
+    target_compile_definitions(dht22_mqtt PRIVATE
+        MQTT_USERNAME=\"${MQTT_USERNAME}\"
+        MQTT_PASSWORD=\"${MQTT_PASSWORD}\"
+    )
+endif()
+pico_enable_stdio_usb(dht22_mqtt 1)
+pico_enable_stdio_uart(dht22_mqtt 0)
+pico_add_extra_outputs(dht22_mqtt)
 
 # Ignore warnings from lwIP's altcp TLS shim.
 set_source_files_properties(
