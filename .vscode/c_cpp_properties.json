@@ -3,7 +3,7 @@
         {
             "name": "avr-atmega128",
             "includePath": [
-                "${workspaceFolder}/atmega128/**",
+                "${workspaceFolder}/embedded/atmega128/**",
                 "/usr/local/include/**",
                 "/usr/include/**",
                 // "/home/aa/.arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino",
@@ -15,7 +15,7 @@
             ],
             // "browse": {
             //     "path": [
-            //         "${workspaceFolder}/atmega128",
+            //         "${workspaceFolder}/embedded/atmega128",
             //         "/usr/local/include",
             //         "/usr/include",
             //         "/home/aa/.arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino",
@@ -39,7 +39,7 @@
             "cStandard": "gnu11",
             "cppStandard": "c++17",
             "intelliSenseMode": "linux-gcc-x64",
-            "compileCommands": "/home/asd/study/build/atmega128-build/compile_commands.json"
+            "compileCommands": "${workspaceFolder}/embedded/atmega128/compile_commands.json"
         },
         {
             "browse": {

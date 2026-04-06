@@ -1,2 +1,30 @@
 browse.*
 build/
+
+# Local editor / OS files
+.DS_Store
+*.swp
+*.swo
+*~
+.idea/
+.vscode/browse.vc.db*
+
+# CMake out-of-source build directories
+cmake-build-*/
+
+# Native / firmware build artifacts
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.elf
+*.bin
+*.hex
+*.uf2
+*.map
+*.lst
+*.dis

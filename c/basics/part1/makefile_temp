@@ -1,0 +1,8 @@
+TARGET = hello
+
+${TARGET} : ${TARGET}.c
+	cc -o ${TARGET} ${TARGET}.c
+	./${TARGET}
+
+clean : 
+	rm ${TARGET}
