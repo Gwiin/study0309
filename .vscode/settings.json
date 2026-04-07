@@ -1,4 +1,4 @@
 {
-    "cmake.sourceDirectory": "/home/asd/study",
+    "cmake.sourceDirectory": "${workspaceFolder}",
     "editor.semanticHighlighting.enabled": false
 }

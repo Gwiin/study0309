@@ -7,7 +7,9 @@ build/
 *.swo
 *~
 .idea/
+*.code-workspace
 .vscode/browse.vc.db*
+cpp/**/.vscode/
 
 # CMake out-of-source build directories
 cmake-build-*/
