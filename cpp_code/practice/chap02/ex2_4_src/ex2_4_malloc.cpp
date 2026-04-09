@@ -1,14 +1,17 @@
 #include <iostream>
 using namespace std;
 
+char *my_strcat(const char *str1, const char *str2); //함수 선언
 
-void my_strcat(const char *str1, const char *str2, char *str3);
+
+//=======================================================================
+//=============================main======================================
 
 int main(){
     //배열 선언, 초기화
     char f_name[10] = {0};
     char s_name[10] = {0};
-    char fs_name[20] = {0};
+    // char fs_name[20] = {0};
 
     
     cout << "첫번째 이름을 입력 : "; 
@@ -16,16 +19,21 @@ int main(){
     cout << "두번째 이름을 입력 : ";
     cin >> s_name;
 
-    my_strcat(f_name, s_name, fs_name);
+    char *fs_name = my_strcat(f_name, s_name);
     
     cout << "전 체 이름 출력 : " << fs_name << endl;
+
+    free(fs_name); //동적할당해제
     return 0;
 }
 
+//=======================================================================
+//========================my_strcat======================================
 
-void my_strcat(const char *str1, const char *str2, char *str3){
+char *my_strcat(const char *str1, const char *str2){
 
     int temp = 0;
+    char *str3 = (char*)malloc(sizeof(char)*20); //동적할당
 
     for (int i=0; i < 10; i++){
         if(str1[i] != '\0')
@@ -45,6 +53,5 @@ void my_strcat(const char *str1, const char *str2, char *str3){
             break;
         }
     }
-
-
+    return str3;
 }
