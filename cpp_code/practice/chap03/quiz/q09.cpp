@@ -23,9 +23,12 @@ Pipe::Pipe(){
 
 int Pipe::arrive(int n){
     int tmp;
-    if(index == 9){
-        tmp = this->shift();
-        data[index] = n;
+    if(index == 10){
+        tmp = data[0];
+        for (int i = 0; i < 9 ; i++){
+            data[i] = data[i+1];
+        }
+        data[9] = n;
         return tmp;
     }
     else{
@@ -41,7 +44,7 @@ int Pipe::shift(){
         data[i] = data[i+1];
     }
     data[9] = 0;
-    // index--;
+    //index--;
     return tmp;
 }
 
