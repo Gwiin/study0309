@@ -41,7 +41,7 @@ int Pipe::shift(){
         data[i] = data[i+1];
     }
     data[9] = 0;
-    index--;
+    // index--;
     return tmp;
 }
 
